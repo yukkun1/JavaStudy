@@ -81,6 +81,9 @@ public class example {
         System.out.println(multiply);
         System.out.println(remi); 
         System.out.println(train);
+       /*自主練習*/
+       String[] soCute = {"cat", "dog", "insect", "fox"};
+       System.out.println(soCute[2]);
        
 
     }   
