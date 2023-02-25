@@ -4,7 +4,7 @@
  
 <%
  // 問① getAttributeに適切な引数をセットして、EmployeeControllerから渡されたBeanを取得する。
- String EmployeeBean = (String)request.getAttribute("EmployeeBean");
+EmployeeBean emp = (EmployeeBean)request.getAttribute("EmployeeBean");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -16,20 +16,20 @@
  <div align="center">
  <!-- 検索が成功した場合の表示 -->
  <%
- if (employeeBean != null) {
+ if (emp != null) {
  %>
  <table border="1">
  <tr>
  <th>社員名</th>
- <td><%=employeeBean.getName()%></td>
+ <td><%=emp.getName()%></td>
  </tr>
  <tr>
  <th>コメント</th>
- <td><%=employeeBean.getComment()%></td>
+ <td><%=emp.getComment()%></td>
  </tr>
  <tr>
  <th>ログインタイム</th>
- <td><%=employeeBean.getLogin_Time()%></td>
+ <td><%=emp.getLogin_Time()%></td>
  </tr>
  </table>
  
