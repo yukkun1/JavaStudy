@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpSession;
 import skillcheck.bean.EmployeeBean;
 import skillcheck.bean.ResponseBean;
 import skillcheck.constant.ConstMessage;
+import skillcheck.dao.EmployeeDao.ExecuteCase;
 import skillcheck.exception.MVCException;
 import skillcheck.logger.Logger;
 import skillcheck.service.EmployeeManagementService;
@@ -147,9 +148,10 @@ public abstract class BaseServlet extends HttpServlet {
             // FIXME Step-3-3: 社員情報管理サービスより、社員情報を取得する処理を呼び出しなさい。
             // Tips1: 社員情報管理サービスはインスタンスが生成済みのものを利用すること
             // Tips2: 完全一致検索の社員情報取得を呼び出すこと
-            // Tips3: 第二引数の渡し方に注意すること
+            // Tips3: 第二引数の渡し方に注意すること ID PASS String不可　格納されたEmployeeBean型であることをEmployeeBeanのインスタンス化
             // ←ここへ記述
-
+            ems = new EmployeeManagementService();
+            ems.getEmployeeData(ExecuteCase.FIND_BY_EMPID, EmployeeBean.);
             // 最初の1件を取得
             resEmployeeBean = responseBean.getEmplyeeBeanList().stream().findFirst().orElse(null);
 
