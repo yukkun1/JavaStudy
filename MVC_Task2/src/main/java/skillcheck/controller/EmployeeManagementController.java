@@ -116,7 +116,8 @@ public final class EmployeeManagementController extends BaseServlet {
         Function<HttpServletRequest, List<String>> rmdGetEmpIdList = (rmdRequest) -> {
             // FIXME Step-4-2: 各jspよりPOSTで送信されたリクエストパラメーターの社員番号を取得しなさい。
             // Tips: jsp側のname属性と一致させること
-            final String pEmpId = "[ここへ記述]";
+        	final String EmpId = rmdRequest.getParameter("empId");
+            final String pEmpId = rmdRequest.getParameter("empId");
             return Arrays.asList(pEmpId);
         };
         /* 関数型インターフェース（ラムダ式）- END */
