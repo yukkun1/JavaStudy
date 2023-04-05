@@ -198,6 +198,10 @@ public final class EmployeeManagementService extends BaseService implements Empl
                     // 2. 1で作成したオブジェクトをpreparedStatementへ格納
                     // Tips: sbQueryは、sbQuery.toString()でStringへ変換
                     // [ここへ記述]
+                    //sbQuery = connection.prepareStatement(reqMessage);
+                    //sbQuery.toString();
+                    
+                    
 
                     // LIKEを使用するため、パラメータを編集
                     final String empId = ExecuteCase.FIND_BY_EMPID_WITH_LIKE.equals(eCase)

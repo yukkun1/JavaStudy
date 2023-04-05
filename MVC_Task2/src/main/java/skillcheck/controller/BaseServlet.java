@@ -30,7 +30,7 @@ public abstract class BaseServlet extends HttpServlet {
 
     // FIXME Step-3: 定数定義
     // FIXME Step-3-1: リクエスト判別用のボタンの属性名を記述しなさい。
-    protected static final String CONST_ELEMENT_NAME_REQUEST = "login";
+    protected static final String CONST_ELEMENT_NAME_REQUEST = "requestType";
     protected static final String CONST_REQUST_KEY_FOR_SENDER = "sender";
     protected static final String CONST_REQUST_KEY_FOR_REDIRECT = "redirect";
     protected static final String CONST_REQUST_KEY_FOR_RESPONSE_BEAN = "responseBean";

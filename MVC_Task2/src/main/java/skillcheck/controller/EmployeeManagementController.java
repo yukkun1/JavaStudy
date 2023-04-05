@@ -8,6 +8,7 @@ import java.util.Objects;
 import java.util.function.Function;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -116,7 +117,6 @@ public final class EmployeeManagementController extends BaseServlet {
         Function<HttpServletRequest, List<String>> rmdGetEmpIdList = (rmdRequest) -> {
             // FIXME Step-4-2: 各jspよりPOSTで送信されたリクエストパラメーターの社員番号を取得しなさい。
             // Tips: jsp側のname属性と一致させること
-        	final String EmpId = rmdRequest.getParameter("empId");
             final String pEmpId = rmdRequest.getParameter("empId");
             return Arrays.asList(pEmpId);
         };
@@ -168,7 +168,8 @@ public final class EmployeeManagementController extends BaseServlet {
             // Tips1: リクエストへレスポンス情報をセット
             // Tips2: キー名は「CONST_REQUST_KEY_FOR_RESPONSE_BEAN」使用
             // [ここへ記述]
-
+              ((ServletRequest) response).setAttribute("response",responseBean);
+              request.setAttribute(CONST_REQUST_KEY_FOR_RESPONSE_BEAN, "responseBean");
             Logger.log(new Throwable(), "遷移先 = " + this.destinationTarget);
 
             // ログイン成功、かつ、セッションが存在、かつ、フォワード先が設定済みの場合のみフォワード
