@@ -8,7 +8,6 @@ import java.util.Objects;
 import java.util.function.Function;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletRequest;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -168,7 +167,7 @@ public final class EmployeeManagementController extends BaseServlet {
             // Tips1: リクエストへレスポンス情報をセット
             // Tips2: キー名は「CONST_REQUST_KEY_FOR_RESPONSE_BEAN」使用
             // [ここへ記述]
-              ((ServletRequest) response).setAttribute("response",responseBean);
+            //((ServletRequest) response).setAttribute("response",responseBean);
               request.setAttribute(CONST_REQUST_KEY_FOR_RESPONSE_BEAN, "responseBean");
             Logger.log(new Throwable(), "遷移先 = " + this.destinationTarget);
 
