@@ -36,9 +36,9 @@ public abstract class BaseServlet extends HttpServlet {
     protected static final String CONST_REQUST_KEY_FOR_RESPONSE_BEAN = "responseBean";
 
     /** ・リクエスト対象（リクエスト&レスポンスを渡す先）のjspファイル */
-    protected static final String CONST_DESTINATION_LOGIN_JSP = "/MVC_Task/login.jsp";
+    protected static final String CONST_DESTINATION_LOGIN_JSP = "/MVC_Task2/login.jsp";
     // FIXME Step-3-2: 実行結果表示用のjspファイルのパスを記述しなさい。
-    protected static final String CONST_DESTINATION_RESULT_JSP = "/MVC_Task/employeeResult.jsp";
+    protected static final String CONST_DESTINATION_RESULT_JSP = "/MVC_Task2/employeeResult.jsp";
 
     /* フィールド変数の定義 */
     /** フォーワード先 */

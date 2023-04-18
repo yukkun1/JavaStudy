@@ -1,5 +1,6 @@
 package skillcheck.service;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -211,6 +212,8 @@ public final class EmployeeManagementService extends BaseService implements Empl
                     // FIXME Step-5-6: preparedStatementに適切なパラメーターをセットしなさい。
                     // Tips: パラメータをセットするインデックスに注意
                     // [ここへ記述]
+                    PreparedStatement ps = ConstSQL.prepareStatement(SELECT_BASE);
+                    ps.setString(0, empId);
 
                     // FIXME Step-5-7: preparedStatementよりSQL(SELECT文)を実行し、resultSetへ結果を格納しなさい。
                     // [ここへ記述]
