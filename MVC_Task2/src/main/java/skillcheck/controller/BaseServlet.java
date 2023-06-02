@@ -150,9 +150,9 @@ public abstract class BaseServlet extends HttpServlet {
             // Tips2: 完全一致検索の社員情報取得を呼び出すこと
             // Tips3: 第二引数の渡し方に注意すること ID PASS String不可　格納されたEmployeeBean型であることをEmployeeBeanのインスタンス化
             // ←ここへ記述
-            ems = new EmployeeManagementService();
+            //ems = new EmployeeManagementService();
             EmployeeBean empId = new EmployeeBean(reqEmpId);
-            responseBean = ems.getEmployeeData(ExecuteCase.FIND_BY_EMPID, empId);
+            ems.getEmployeeData(ExecuteCase.FIND_BY_EMPID, empId);
             //EmployeeBean emp = new EmployeeBean() ;
             // 最初の1件を取得
             resEmployeeBean = responseBean.getEmplyeeBeanList().stream().findFirst().orElse(null);
