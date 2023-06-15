@@ -207,7 +207,7 @@ public final class EmployeeManagementService extends BaseService implements Empl
                     // 2. 1で作成したオブジェクトをpreparedStatementへ格納
                     // Tips: sbQueryは、sbQuery.toString()でStringへ変換
                     // [ここへ記述]
-                    super.preparedStatement = connection.prepareStatement(sbQuery.toString());
+                    preparedStatement = connection.prepareStatement(sbQuery.toString());
                   
                     // LIKEを使用するため、パラメータを編集
                     final String empId = ExecuteCase.FIND_BY_EMPID_WITH_LIKE.equals(eCase)
@@ -218,11 +218,11 @@ public final class EmployeeManagementService extends BaseService implements Empl
                     // Tips: パラメータをセットするインデックスに注意
                     // [ここへ記述]
   
-                   super.preparedStatement.setString(1, empId);
+                   preparedStatement.setString(1, empId);
 
                     // FIXME Step-5-7: preparedStatementよりSQL(SELECT文)を実行し、resultSetへ結果を格納しなさい。
                     // [ここへ記述]
-                    this.resultSet = super.preparedStatement.executeQuery();
+                    resultSet = preparedStatement.executeQuery();
                     Logger.log(new Throwable(), "SQL: " +  this.preparedStatement.toString());
                 }
                 break;
