@@ -18,7 +18,7 @@ public final class ConstSQL {
     /** ユーザー名 */
     public static final String JDBC_POSTGRES_USER = "postgres";
     /** パスワード */
-    public static final String JDBC_POSTGRES_PASS = "postgres";
+    public static final String JDBC_POSTGRES_PASS = "freeks";
 
     // FIXME Step-2: 以下のSELECT文、INSERT文、UPDATE文を記述しなさい
     // Tips: 更新値や条件値には「?」を使用してください
