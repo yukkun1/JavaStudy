@@ -113,10 +113,10 @@ public final class EmployeeManagementController extends BaseServlet {
         // MEMO: Functionは、apply(引数)で処理を実行
 
         // リクエストより社員番号を取得（※削除時は複数の可能性あり）: 関数型インターフェース（ラムダ式）
-        Function<HttpServletRequest, List<String>> rmdGetEmpIdList = (Request) -> {
+        Function<HttpServletRequest, List<String>> rmdGetEmpIdList = (rmdRequest) -> {
             // FIXME Step-4-2: 各jspよりPOSTで送信されたリクエストパラメーターの社員番号を取得しなさい。
             // Tips: jsp側のname属性と一致させること
-            final String pEmpId = Request.getParameter("empId");
+            final String pEmpId = request.getParameter("empId");
             return Arrays.asList(pEmpId);
         };
         /* 関数型インターフェース（ラムダ式）- END */
